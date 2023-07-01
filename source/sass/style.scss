@@ -2,7 +2,9 @@
 @use "global/variables";
 @use "global/global";
 @use "global/fonts";
+@use "global/visually-hidden";
 
 /* BLOCKS */
 @use "blocks/header";
 @use "blocks/page";
+@use "blocks/main";
