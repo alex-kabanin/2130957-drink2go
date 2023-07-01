@@ -1,5 +1,19 @@
+@use "../global/colors";
+
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+  display: flex;
+  min-height: 60px;
+  padding: 12px 20px;
+  background-color: colors.$base-white;
+  color: colors.$base-black;
+}
+
+.header__logo {
+  margin-right: 80px;
+  text-decoration: none;
+
+  img {
+    display: block;
+  }
 }

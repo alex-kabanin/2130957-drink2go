@@ -1,0 +1,71 @@
+@use "../global/colors";
+
+.navigation {
+
+}
+
+.navigation__toggle {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  //display: none;
+  width: 60px;
+  height: 60px;
+  padding: 22px;
+  background-color: transparent;
+  border: 0;
+}
+
+
+.navigation__border {
+  position: relative;
+  display: block;
+  height: 2px;
+  background-color: colors.$base-black;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: colors.$base-black;
+  }
+
+  &::before {
+    top: -7px;
+  }
+
+  &::after {
+    top: 7px;
+  }
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--menu {
+    display: none;
+  }
+
+  &--account {
+    display: flex;
+  }
+}
+
+.navigation__label {
+  display: none;
+ }
+
+.navigation__link {
+  width: 60px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: colors.$base-black;
+  text-decoration: none;
+}
