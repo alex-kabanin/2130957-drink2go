@@ -1,0 +1,38 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.advantages {
+  padding: 50px variables.$wrapper 60px;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 50px 30px 100px;
+  }
+}
+
+.advantages__flag {
+  @include mixins.flag;
+}
+
+.advantages__title {
+  margin-bottom: 36px;
+
+  @include mixins.h2-title;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+}

@@ -1,0 +1,74 @@
+@use "../global/colors";
+@use "../global/variables";
+
+.pagination {
+  display: flex;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: colors.$base-primary;
+  background-color: colors.$base-white;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 20px;
+  }
+}
+
+.pagination__label {
+  display: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  color: colors.$base-primary;
+  text-decoration: none;
+  background-color: colors.$base-white;
+
+  &--current {
+    color: colors.$base-black;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+.pagination__icon {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}

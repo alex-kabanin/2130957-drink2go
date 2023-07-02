@@ -1,0 +1,226 @@
+@use "../global/colors";
+@use "../global/mixins";
+@use "../global/variables";
+
+.filter {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+}
+
+.filter__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter__legend {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  &--range {
+    margin-bottom: 32px;
+  }
+}
+
+.filter__range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 32px;
+  width: 100%;
+  background-color: colors.$light-grey;
+}
+
+.filter__range-bar {
+  position: relative;
+  left: 0;
+  bottom: 1px;
+  width: 85%;
+  height: 4px;
+  background-color: colors.$base-primary;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  top: -11px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: colors.$lightest-grey;
+  border-radius: 50%;
+  border: 2px solid colors.$base-primary;
+  outline: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.filter__range-toggle--toggle-min {
+  left: 0;
+}
+
+.filter__range-toggle--toggle-max {
+  left: calc(100% - 8px);
+}
+
+.filter__range-inputs {
+  position: relative;
+  display: flex;
+  margin-bottom: 24px;
+  gap: 44px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: colors.$light-grey;
+    margin: auto;
+  }
+}
+
+.filter__range-input {
+  width: 100%;
+  min-height: 40px;
+  font-size: 16px;
+  font-family: "Montserrat","Arial",sans-serif;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  padding: 5px 10px;
+  border: 2px solid colors.$base-primary;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.filter__list {
+  margin: 0 0 34px;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.filter__item {
+  margin-bottom: 20px;
+}
+
+.filter__label {
+  position: relative;
+  min-width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.filter__list--radio .filter__label {
+  padding-left: 34px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: colors.$base-white;
+    border-radius: 50%;
+    border: 2px solid colors.$base-grey;
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: 0;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.filter__input[type=radio]:checked+.filter__label::after {
+  border-color: colors.$base-primary;
+  transition: all .2s ease-in-out;
+}
+
+.filter__input[type=radio]:checked+.filter__label::before {
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  top: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  background-color: colors.$base-primary;
+  border-radius: 50%;
+  border: 0;
+  z-index: 2;
+  transition: all .2s ease-in-out;
+}
+
+.filter__input:disabled+.filter__label {
+  cursor: default;
+  color: colors.$base-grey;
+}
+
+.filter__list--checkbox .filter__label {
+  padding-left: 52px;
+
+  &::before {
+    @include mixins.checkbox;
+
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: colors.$base-white;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all .2s ease-in-out;
+  }
+
+  &::after {
+    @include mixins.checkbox;
+
+    left: 0;
+    width: 42px;
+    height: 24px;
+    background-color: colors.$base-grey;
+    border-radius: 12px;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.filter__input[type=checkbox]:checked+.filter__label::before {
+  left: 19px;
+}
+
+.filter__input[type=checkbox]:checked+.filter__label::after {
+  background-color: colors.$base-primary;
+}
+
+.filter__list--checkbox {
+  margin-bottom: 30px;
+}
+
+.filter__button {
+  @media (max-width: variables.$mobile-only) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.filter__button-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1/4;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+}

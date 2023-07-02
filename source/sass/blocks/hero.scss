@@ -1,5 +1,85 @@
 @use "../global/colors";
+@use "../global/variables";
+@use "../global/mixins";
 
 .hero {
+  position: relative;
+  padding: 20px variables.$wrapper 60px;
+  text-align: center;
   background-color: colors.$flat-white;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 60px variables.$wrapper 308px;
+    margin-bottom: 187px;
+  }
+}
+
+.hero__flag {
+  @include mixins.flag;
+}
+
+.hero__title {
+  @include mixins.h1-title;
+}
+
+.hero__description {
+  margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    width: 91%;
+    margin: 0 auto 20px;
+  }
+}
+
+.hero__pricing-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero__prices {
+  line-height: 32px;
+
+  &--new-price {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &--old-price {
+    margin-right: 6px;
+    font-size: 16px;
+    color: colors.$base-primary;
+    text-decoration-line: line-through;
+  }
+}
+
+.hero__img-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -188px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: static;
+  }
+}
+
+.hero__img {
+  @media (min-width: variables.$tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
 }

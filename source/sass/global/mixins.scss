@@ -1,0 +1,55 @@
+@use "colors";
+@use "variables";
+
+@mixin flag {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: colors.$base-primary;
+  margin-bottom: 4px;
+}
+
+@mixin h1-title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+}
+
+@mixin h2-title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+@mixin h3-title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@mixin checkbox {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  border: 0;
+  margin: auto;
+}

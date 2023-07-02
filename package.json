@@ -55,6 +55,7 @@
   },
   "type": "module",
   "dependencies": {
-    "gulp-rename": "^2.0.0"
+    "gulp-rename": "^2.0.0",
+    "swiper": "^9.4.1"
   }
 }

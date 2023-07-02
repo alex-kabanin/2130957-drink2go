@@ -1,21 +1,57 @@
 @use "../global/colors";
+@use "../global/variables";
 
 .navigation {
 
 }
 
 .navigation__toggle {
-  position: absolute;
-  top: 0;
-  right: 4px;
-  //display: none;
-  width: 60px;
-  height: 60px;
-  padding: 22px;
-  background-color: transparent;
-  border: 0;
+  display: none;
 }
 
+.header--js-enable .navigation__toggle {
+  @media (max-width: variables.$mobile-only) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    background-color: transparent;
+    border: 0;
+    z-index: 9;
+  }
+}
+
+.header--js-enable .navigation__list--menu {
+  @media (max-width: variables.$mobile-only) {
+    display: none;
+  }
+}
+
+.header--menu-open .navigation__list--menu {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.header--menu-open .navigation__border {
+  background-color: transparent;
+}
+
+.header--menu-open .navigation__border::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.header--menu-open .navigation__border::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
 
 .navigation__border {
   position: relative;
@@ -47,8 +83,21 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: variables.$desktop-width) {
+    gap: 20px;
+  }
+
   &--menu {
-    display: none;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    @media (min-width: variables.$tablet-width) {
+      position: static;
+      display: flex;
+    }
   }
 
   &--account {
@@ -58,14 +107,65 @@
 
 .navigation__label {
   display: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    margin-left: 6px;
+  }
  }
 
 .navigation__link {
-  width: 60px;
-  height: 36px;
+  min-height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: colors.$base-black;
   text-decoration: none;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 80px;
+    padding: 12px 20px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+.navigation__list--menu .navigation__link {
+  @media (max-width: variables.$mobile-only) {
+    background-color: colors.$base-white;
+    border-bottom: 1px solid colors.$base-grey;
+  }
+}
+
+.navigation__list--account .navigation__link {
+  min-width: 60px;
+}
+
+.navigation__link--current {
+  color: colors.$base-primary;
+
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: colors.$base-primary;
+    }
+  }
+}
+
+.navigation {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }

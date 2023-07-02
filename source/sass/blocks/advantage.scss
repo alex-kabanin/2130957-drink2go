@@ -1,0 +1,57 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.advantage {
+  @media (max-width: variables.$mobile-only) {
+    margin-bottom: 33px;
+  }
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    padding-left: 72px;
+    text-align: left;
+  }
+}
+
+.advantage__title {
+  margin-bottom: 4px;
+
+  @include mixins.h3-title;
+}
+
+.advantage .advantage__title::before {
+  content: "";
+  display: block;
+  margin: 0 auto 10px;
+  width: 52px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.advantage--speed .advantage__title::before {
+  background-image: url("../img/advantages/speed.svg");
+}
+
+.advantage--comfort .advantage__title::before {
+  background-image: url("../img/advantages/comfort.svg");
+}
+
+.advantage--cheer .advantage__title::before {
+  background-image: url("../img/advantages/cheer.svg");
+}
+
+.advantage--eco .advantage__title::before {
+  background-image: url("../img/advantages/eco.svg");
+}
+
+.advantage__description {
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
