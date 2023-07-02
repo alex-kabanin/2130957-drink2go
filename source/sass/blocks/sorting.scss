@@ -11,6 +11,11 @@
   @media (min-width: variables.$tablet-width) {
     justify-content: flex-end;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 2/3;
+    align-self: start;
+  }
 }
 
 .sorting__label {

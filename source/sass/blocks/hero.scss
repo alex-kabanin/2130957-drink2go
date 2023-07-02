@@ -12,6 +12,12 @@
     padding: 60px variables.$wrapper 308px;
     margin-bottom: 187px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 0;
+    padding: 30px 80px 84px 105px;
+    text-align: left;
+  }
 }
 
 .hero__flag {
@@ -30,6 +36,11 @@
     line-height: 32px;
     width: 91%;
     margin: 0 auto 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 100%;
+    margin: 0 auto 40px;
   }
 }
 
@@ -81,5 +92,22 @@
   @media (min-width: variables.$desktop-width) {
     width: 600px;
     height: 600px;
+  }
+}
+
+.hero__slide {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.hero__content {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
   }
 }

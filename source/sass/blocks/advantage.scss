@@ -10,12 +10,21 @@
     padding-left: 72px;
     text-align: left;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .advantage__title {
   margin-bottom: 4px;
 
   @include mixins.h3-title;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .advantage .advantage__title::before {
@@ -30,6 +39,11 @@
   @media (min-width: variables.$tablet-width) {
     position: absolute;
     left: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: static;
+    margin: 0 auto 20px;
   }
 }
 

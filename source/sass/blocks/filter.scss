@@ -9,6 +9,10 @@
     column-gap: 30px;
     row-gap: 40px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+  }
 }
 
 .filter__group {
@@ -213,6 +217,10 @@
   @media (max-width: variables.$mobile-only) {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 50%;
   }
 }
 

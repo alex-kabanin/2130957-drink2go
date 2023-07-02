@@ -9,6 +9,10 @@
     flex-wrap: wrap;
     padding: 40px 0;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: variables.$wrapper-desktop variables.$wrapper-desktop;
+  }
 }
 
 .footer__block {
@@ -21,6 +25,10 @@
     margin-bottom: 30px;
     padding: 0 variables.$wrapper;
     border-bottom: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: calc(100% / 4);
   }
 }
 

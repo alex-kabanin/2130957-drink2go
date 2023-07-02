@@ -8,10 +8,20 @@
     width: 100%;
     justify-content: space-between;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    width: calc(100% / 4);
+  }
 }
 
 .social__description {
   display: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    margin-bottom: 50px;
+  }
 }
 
 .social__list {
@@ -33,6 +43,10 @@
 
 .social__logo {
   margin-right: 30px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 0;
+  }
 }
 
 .social__img {
@@ -43,4 +57,10 @@
     width: 170px;
     height: 36px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
+

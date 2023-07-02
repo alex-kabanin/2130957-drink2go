@@ -9,6 +9,10 @@
   @media (min-width: variables.$tablet-width) {
     padding: 80px variables.$wrapper 90px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 100px variables.$wrapper-desktop 120px;
+  }
 }
 
 .catalog__flag {
@@ -36,6 +40,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 60px;
+    grid-column: 2/3;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -99,5 +109,14 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 20px;
+  }
+}
+
+.catalog__wrapper {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 323px 1fr;
+    grid-template-rows: 56px 1fr;
+    column-gap: 30px;
   }
 }
