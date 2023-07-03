@@ -70,4 +70,48 @@
 .swiper-pagination-bullet-active {
   background-color: colors.$base-primary;
 }
+.swiper-slide {
+  &--first {
+    background-image: linear-gradient(180deg, colors.$flat-white 100%, colors.$flat-white 100%);
 
+    @media (min-width: variables.$tablet-width) {
+      background-image: linear-gradient(180deg, colors.$flat-white 76%, colors.$base-white 76%);
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-image: linear-gradient(180deg, colors.$flat-white 100%, colors.$flat-white 100%);
+    }
+  }
+
+  &--second {
+    background-image: linear-gradient(180deg, colors.$lavender-latte 100%, colors.$lavender-latte 100%);
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: linear-gradient(180deg, colors.$lavender-latte 76%, colors.$base-white 76%);
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-image: linear-gradient(180deg, colors.$lavender-latte 100%, colors.$lavender-latte 100%);
+    }
+  }
+
+  &--third {
+    background-image: linear-gradient(180deg, colors.$espresso 100%, colors.$espresso 100%);
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: linear-gradient(180deg, colors.$espresso 76%, colors.$base-white 76%);
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-image: linear-gradient(180deg, colors.$espresso 100%, colors.$espresso 100%);
+    }
+  }
+}
+
+.swiper {
+  overflow: visible;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom,80px);
+}

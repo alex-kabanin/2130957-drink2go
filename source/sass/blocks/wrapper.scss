@@ -1,0 +1,7 @@
+@use "../global/variables";
+@use "../global/colors";
+
+.wrapper {
+  max-width: variables.$desktop-width;
+  margin: 0 auto;
+}

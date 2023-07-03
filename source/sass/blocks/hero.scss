@@ -6,12 +6,7 @@
   position: relative;
   text-align: center;
 
-  @media (min-width: variables.$tablet-width) {
-    margin-bottom: 187px;
-  }
-
   @media (min-width: variables.$desktop-width) {
-    margin-bottom: 0;
     text-align: left;
   }
 }
@@ -69,7 +64,7 @@
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -188px;
+    bottom: 0px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -96,24 +91,14 @@
 
   @media (min-width: variables.$tablet-width) {
     padding: 60px variables.$wrapper 308px;
+    height: 827px;
   }
 
   @media (min-width: variables.$desktop-width) {
     display: flex;
     gap: 30px;
     padding: 30px 80px 84px 105px;
-  }
-
-  &--first {
-    background-color: colors.$flat-white;
-  }
-
-  &--second {
-    background-color: colors.$lavender-latte;
-  }
-
-  &--third {
-    background-color: colors.$espresso;
+    height: auto;
   }
 }
 
