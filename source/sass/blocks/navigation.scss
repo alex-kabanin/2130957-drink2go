@@ -1,10 +1,6 @@
 @use "../global/colors";
 @use "../global/variables";
 
-.navigation {
-
-}
-
 .navigation__toggle {
   display: none;
 }
@@ -21,6 +17,10 @@
     background-color: transparent;
     border: 0;
     z-index: 9;
+
+    &:active {
+      background-color: colors.$base-secondary;
+    }
   }
 }
 
@@ -89,7 +89,7 @@
 
   &--menu {
     position: absolute;
-    top: 11px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 3;
@@ -114,13 +114,32 @@
   }
  }
 
+.navigation__list--menu .navigation__link {
+  @media (max-width: variables.$mobile-only) {
+    background-color: colors.$base-white;
+    border-bottom: 1px solid colors.$base-grey;
+  }
+}
+
 .navigation__link {
   min-height: 36px;
   display: flex;
+  padding: 20px;
   justify-content: center;
   align-items: center;
   color: colors.$base-black;
   text-decoration: none;
+  background-color: colors.$base-white;
+  outline: 0;
+  transition: all .2s ease-in-out;
+
+  &:active {
+    background-color: colors.$base-secondary;
+  }
+
+  @media (max-width: variables.$mobile-only) {
+    height: 60px;
+  }
 
   @media (min-width: variables.$tablet-width) {
     min-height: 80px;
@@ -130,13 +149,15 @@
     letter-spacing: .02em;
     text-transform: uppercase;
     font-weight: 500;
-  }
-}
 
-.navigation__list--menu .navigation__link {
-  @media (max-width: variables.$mobile-only) {
-    background-color: colors.$base-white;
-    border-bottom: 1px solid colors.$base-grey;
+    &:hover, &:focus {
+      color: colors.$base-primary;
+    }
+
+    &:active {
+      color: colors.$base-primary;
+      background-color: colors.$base-secondary;
+    }
   }
 }
 
@@ -146,6 +167,11 @@
 
 .navigation__link--current {
   color: colors.$base-primary;
+
+  &:hover, &:focus, &:active {
+    color: colors.$base-primary;
+    background-color: transparent;
+  }
 
   @media (min-width: variables.$tablet-width) {
     position: relative;

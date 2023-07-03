@@ -10,14 +10,42 @@
   border-radius: 4px;
   outline: 0;
   cursor: pointer;
+  transition: all .2s ease-in-out;
 
   &--primary {
     color: colors.$base-white;
     background-color: colors.$base-primary;
+
+    &:hover, &:focus {
+      background-color: colors.$primary-lighter;
+    }
+
+    &:active {
+      background-color: colors.$primary-darker;
+    }
+
+    &:disabled {
+      background-color: colors.$base-grey;
+    }
   }
 
   &--secondary {
     color: colors.$base-primary;
     background-color: colors.$base-white;
+
+    &:hover, &:focus {
+      color: colors.$base-white;
+      background-color: colors.$primary-lighter;
+    }
+
+    &:active {
+      color: colors.$base-white;
+      background-color: colors.$primary-darker;
+    }
+
+    &:disabled {
+      color: colors.$base-white;
+      background-color: colors.$light-grey;
+    }
   }
 }

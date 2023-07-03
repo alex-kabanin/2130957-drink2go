@@ -3,12 +3,12 @@
 .header {
   display: flex;
   min-height: 60px;
-  padding: 12px variables.$wrapper;
+  padding: 0 variables.$wrapper;
   background-color: colors.$base-white;
   color: colors.$base-black;
 
   @media (max-width: variables.$mobile-only) {
-    margin-top: 155px;
+    margin-top: 250px;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -30,6 +30,10 @@
 .header__logo-link {
   margin-right: 80px;
   text-decoration: none;
+
+  @media (max-width: variables.$mobile-only) {
+    margin-top: 12px;
+  }
 
   @media (min-width: variables.$tablet-width) {
     display: flex;

@@ -4,18 +4,15 @@
 
 .hero {
   position: relative;
-  padding: 20px variables.$wrapper 60px;
   text-align: center;
   background-color: colors.$flat-white;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 60px variables.$wrapper 308px;
     margin-bottom: 187px;
   }
 
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 0;
-    padding: 30px 80px 84px 105px;
     text-align: left;
   }
 }
@@ -96,9 +93,16 @@
 }
 
 .hero__slide {
+  padding: 20px variables.$wrapper 60px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 60px variables.$wrapper 308px;
+  }
+
   @media (min-width: variables.$desktop-width) {
     display: flex;
     gap: 30px;
+    padding: 30px 80px 84px 105px;
   }
 }
 

@@ -2,11 +2,18 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Drink2Go</title>
-    <meta name="Description" content="Интернет-магазин по продаже кофейных напитков">
+    <title>Интернет-магазин кофейных напитков «Drink2Go»</title>
+    <meta name="Description" content="Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="img/favicon.png"  sizes="32x32" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.svg"  sizes="32x32" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/favicon180x180.svg" />
   </head>
   <body class="page__body">
     <header class="header">
@@ -14,7 +21,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo/logo_drink2go_full.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo_drink2go_tablet.svg">
-          <img class="header__logo" src="img/logo/logo_drink2go.svg" alt="Логотип" height="36" width="32">
+          <img class="header__logo" src="img/logo/logo_drink2go.svg" alt="Логотип «Drink2Go»." height="36" width="32">
         </picture>
         <p class="header__logo-caption">Интернет-магазин кофейных напитков</p>
       </a>
@@ -81,6 +88,10 @@
                 </div>
               </div>
             </div>
+        <button class="swiper-button-prev" type="button"></button>
+        <button class="swiper-button-next" type="button"></button>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-notification"></div>
       </section>
       <section class="advantages">
         <p class="advantages__flag">Преимущества</p>
@@ -192,46 +203,76 @@
           </form>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <img class="catalog__image">
-              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span class="catalog__price">225₽</span>
-              <button class="catalog__button button button--primary">В корзину</button>
+              <a href="#" class="catalog__link">
+                <picture class="catalog__image-wrapper">
+                  <source srcset="img/catalog/coffee-can-1.webp, img/catalog/coffee-can-1@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/coffee-can-1.png" srcset="img/catalog/coffee-can-1@2x.png" height="188" width="130" alt="Декаф Флэт Уайт" class="catalog__image">
+                </picture>
+                <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+                <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <span class="catalog__price">225₽</span>
+                <button class="catalog__button button button--primary">В корзину</button>
+              </a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__image">
-              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span class="catalog__price">225₽</span>
-              <button class="catalog__button button button--primary">В корзину</button>
+              <a href="#" class="catalog__link">
+                <picture class="catalog__image-wrapper">
+                  <source srcset="img/catalog/coffee-can-2.webp, img/catalog/coffee-can-2@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/coffee-can-2.png" srcset="img/catalog/coffee-can-2@2x.png" height="188" width="130" alt="Декаф Флэт Уайт" class="catalog__image">
+                </picture>
+                <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+                <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <span class="catalog__price">225₽</span>
+                <button class="catalog__button button button--primary">В корзину</button>
+              </a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__image">
-              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span class="catalog__price">225₽</span>
-              <button class="catalog__button button button--primary">В корзину</button>
+              <a href="#" class="catalog__link">
+                <picture class="catalog__image-wrapper">
+                  <source srcset="img/catalog/coffee-can-3.webp, img/catalog/coffee-can-3@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/coffee-can-3.png" srcset="img/catalog/coffee-can-3@2x.png" height="188" width="130" alt="Декаф Флэт Уайт" class="catalog__image">
+                </picture>
+                <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+                <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <span class="catalog__price">225₽</span>
+                <button class="catalog__button button button--primary">В корзину</button>
+              </a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__image">
-              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span class="catalog__price">225₽</span>
-              <button class="catalog__button button button--primary">В корзину</button>
+              <a href="#" class="catalog__link">
+                <picture class="catalog__image-wrapper">
+                  <source srcset="img/catalog/coffee-can-4.webp, img/catalog/coffee-can-4@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/coffee-can-4.png" srcset="img/catalog/coffee-can-4@2x.png" height="188" width="130" alt="Декаф Флэт Уайт" class="catalog__image">
+                </picture>
+                <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+                <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <span class="catalog__price">225₽</span>
+                <button class="catalog__button button button--primary">В корзину</button>
+              </a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__image">
-              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span class="catalog__price">225₽</span>
-              <button class="catalog__button button button--primary">В корзину</button>
+              <a href="#" class="catalog__link">
+                <picture class="catalog__image-wrapper">
+                  <source srcset="img/catalog/coffee-can-5.webp, img/catalog/coffee-can-15@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/coffee-can-5.png" srcset="img/catalog/coffee-can-5@2x.png" height="188" width="130" alt="Декаф Флэт Уайт" class="catalog__image">
+                </picture>
+                <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+                <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <span class="catalog__price">225₽</span>
+                <button class="catalog__button button button--primary">В корзину</button>
+              </a>
             </li>
             <li class="catalog__item">
-              <img class="catalog__image">
-              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span class="catalog__price">225₽</span>
-              <button class="catalog__button button button--primary">В корзину</button>
+              <a href="#" class="catalog__link">
+                <picture class="catalog__image-wrapper">
+                  <source srcset="img/catalog/coffee-can-6.webp, img/catalog/coffee-can-6@2x.webp 2x" type="image/webp">
+                  <img src="img/catalog/coffee-can-6.png" srcset="img/catalog/coffee-can-6@2x.png" height="188" width="130" alt="Декаф Флэт Уайт" class="catalog__image">
+                </picture>
+                <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+                <p class="catalog__item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <span class="catalog__price">225₽</span>
+                <button class="catalog__button button button--primary">В корзину</button>
+              </a>
             </li>
           </ul>
         </div>
@@ -259,14 +300,16 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта.</h2>
-        <div class="map__wrapper"></div>
+        <div class="map__wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.2056417378939!2d30.316765169712212!3d59.96826666962866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTk3MDIy!5e0!3m2!1sru!2sam!4v1688365479996!5m2!1sru!2sam"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__block social">
         <picture class="social__logo">
           <source media="(min-width: 768px)" srcset="img/logo/logo_drink2go_full.svg">
-          <img class="social__img" src="img/logo/logo_drink2go_footer.svg" alt="Логотип." width="82" height="36">
+          <img class="social__img" src="img/logo/logo_drink2go_footer.svg" alt="Логотип «Drink2Go»." width="82" height="36">
         </picture>
         <p class="social__description">Интернет-магазин кофейных напитков</p>
         <ul class="social__list">
@@ -338,7 +381,7 @@
       </div>
       <div class="copyright">
         <span>Разработано в&nbsp;</span>
-        <a class="copyright__link">
+        <a href="https://htmlacademy.ru/" target="_blank" class="copyright__link">
           <svg class="copyright__icon" width="112" height="16" role="img"><use xlink:href="img/icons/stack.svg#academy"></use></svg>
           <span class="visually-hidden">HTML Academy.</span>
         </a>

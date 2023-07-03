@@ -57,6 +57,16 @@
   text-decoration: none;
   color: colors.$base-black;
   text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  outline: 0;
+
+  &:hover, &:focus {
+    color: colors.$primary-lighter;
+  }
+
+  &:active {
+    color: colors.$primary-darker;
+  }
 }
 
 .footer__link--map, .footer__link--tel {

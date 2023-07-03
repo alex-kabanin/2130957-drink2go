@@ -17,4 +17,15 @@
 .copyright__link {
   color: currentColor;
   text-decoration: none;
+  outline: 0;
+  transition: all .2s ease-in-out;
+
+
+  &:hover, &:focus {
+    color: colors.$base-primary;
+  }
+
+  &:active {
+    color: colors.$primary-darker;
+  }
 }

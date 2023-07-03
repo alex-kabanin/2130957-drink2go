@@ -25,6 +25,22 @@
   border-radius: 4px;
   cursor: pointer;
   outline: 0;
+  transition: all .2s ease-in-out;
+
+
+  &:hover, &:focus {
+    color: colors.$base-white;
+    background-color: colors.$primary-lighter;
+  }
+
+  &:active {
+    background-color: colors.$primary-darker;
+  }
+
+  &:disabled {
+    color: colors.$base-white;
+    background-color: colors.$light-grey;
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding: 0 20px;
@@ -59,11 +75,37 @@
   color: colors.$base-primary;
   text-decoration: none;
   background-color: colors.$base-white;
+  transition: all .2s ease-in-out;
+  outline: 0;
+
+  &:hover, &:focus {
+    color: colors.$base-white;
+    background-color: colors.$primary-lighter;
+  }
+
+  &:active {
+    background-color: colors.$primary-darker;
+  }
+
+  &--disabled {
+    color: colors.$base-white;
+    background-color: colors.$light-grey;
+
+    &:hover, &:focus, &:active {
+      color: colors.$base-white;
+      background-color: colors.$light-grey;
+    }
+  }
 
   &--current {
     color: colors.$base-black;
     background-color: transparent;
     cursor: default;
+
+    &:hover, &:focus, &:active {
+      color: colors.$base-black;
+      background-color: transparent;
+    }
   }
 }
 

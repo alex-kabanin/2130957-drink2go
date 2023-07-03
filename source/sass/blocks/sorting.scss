@@ -45,8 +45,14 @@
   cursor: pointer;
   transition: all .2s ease-in-out;
 
-  &:hover, &:focus {
+  &:hover, &:focus-visible {
     background-color: colors.$base-secondary;
+    background-image: url("../img/catalog/down.svg");
+  }
+
+  &:focus {
+    background-color: colors.$base-secondary;
+    background-image: url("../img/catalog/up.svg");
   }
 }
 
