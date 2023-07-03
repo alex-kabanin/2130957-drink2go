@@ -60,34 +60,101 @@
     <main class="main">
       <section class="hero">
         <h1 class="visually-hidden">Drink2Go, интернет-магазин по продаже кофейных напитков.</h1>
-            <div class="hero__slide">
-              <picture class="hero__img-wrapper">
-                <source media="(min-width: 1440px)" srcset="img/hero/flat_white_img_desktop.webp, img/hero/flat_white_img_desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="img/hero/flat_white_img_desktop.png, img/hero/flat_white_img_desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/hero/flat_white_img_tablet.webp, img/hero/flat_white_img_tablet@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/hero/flat_white_img_tablet.png, img/hero/flat_white_img_tablet@2x.png 2x">
-                <source srcset="img/hero/flat_white_img.webp, img/hero/flat_white_img@2x.webp 2x" type="image/webp">
-                <img class="hero__img" src="img/hero/flat_white_img.png" srcset="img/hero/flat_white_img@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
-              </picture>
-              <div class="hero__content">
-                <p class="hero__flag">Новинка!</p>
-                <h2 class="hero__title">Декаф Флэт Уайт</h2>
-                <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-                <div class="hero__pricing-block">
-                  <div class="hero__prices">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero__slide hero__slide--first">
+                <picture class="hero__img-wrapper">
+                  <source media="(min-width: 1440px)" srcset="img/hero/flat_white_img_desktop.webp, img/hero/flat_white_img_desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/hero/flat_white_img_desktop.png, img/hero/flat_white_img_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/hero/flat_white_img_tablet.webp, img/hero/flat_white_img_tablet@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/hero/flat_white_img_tablet.png, img/hero/flat_white_img_tablet@2x.png 2x">
+                  <source srcset="img/hero/flat_white_img.webp, img/hero/flat_white_img@2x.webp 2x" type="image/webp">
+                  <img class="hero__img" src="img/hero/flat_white_img.png" srcset="img/hero/flat_white_img@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
+                </picture>
+                <div class="hero__content">
+                  <p class="hero__flag">Новинка!</p>
+                  <h2 class="hero__title">Декаф Флэт Уайт</h2>
+                  <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                  <div class="hero__pricing-block">
+                    <div class="hero__prices">
                   <span class="hero__prices hero__prices--old-price">
                     295₽
                   </span>
-                    <span  class="hero__prices hero__prices--new-price">
+                      <span  class="hero__prices hero__prices--new-price">
                     225₽
                   </span>
+                    </div>
+                    <button class="hero__button button button--primary" type="button">
+                      Заказать
+                    </button>
                   </div>
-                  <button class="hero__button button button--primary" type="button">
-                    Заказать
-                  </button>
                 </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="hero__slide hero__slide--second">
+                <picture class="hero__img-wrapper">
+                  <source media="(min-width: 1440px)" srcset="img/hero/lavender_img_desktop.webp, img/hero/lavender_img_desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/hero/lavender_img_desktop.png, img/hero/lavender_img_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/hero/lavender_img_img_tablet.webp, img/hero/lavender_img_tablet@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/hero/lavender_img_tablet.png, img/hero/lavender_img_img_tablet@2x.png 2x">
+                  <source srcset="img/hero/lavender_img.webp, img/hero/lavender_img@2x.webp 2x" type="image/webp">
+                  <img class="hero__img" src="img/hero/lavender_img.png" srcset="img/hero/lavender_img@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
+                </picture>
+                <div class="hero__content">
+                  <p class="hero__flag">Новинка!</p>
+                  <h2 class="hero__title">Лавандовый Латте</h2>
+                  <p class="hero__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                  <div class="hero__pricing-block">
+                    <div class="hero__prices">
+                  <span class="hero__prices hero__prices--old-price">
+                    285₽
+                  </span>
+                      <span  class="hero__prices hero__prices--new-price">
+                    265₽
+                  </span>
+                    </div>
+                    <button class="hero__button button button--primary" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__slide hero__slide--third">
+                <picture class="hero__img-wrapper">
+                  <source media="(min-width: 1440px)" srcset="img/hero/espresso_img_desktop.webp, img/hero/espresso_img_desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/hero/espresso_img_desktop.png, img/hero/espresso_img_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/hero/espresso_img_tablet.webp, img/hero/espresso_img_tablet@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/hero/espresso_img.png, img/hero/espresso_img_tablet@2x.png 2x">
+                  <source srcset="img/hero/espresso_img.webp, img/hero/espresso_img@2x.webp 2x" type="image/webp">
+                  <img class="hero__img" src="img/hero/espresso_img.png" srcset="img/hero/espresso_img@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
+                </picture>
+                <div class="hero__content">
+                  <p class="hero__flag">Новинка!</p>
+                  <h2 class="hero__title">Тройной Эспрессо</h2>
+                  <p class="hero__description"> Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <div class="hero__pricing-block">
+                    <div class="hero__prices">
+                  <span class="hero__prices hero__prices--old-price">
+                    295₽
+                  </span>
+                      <span  class="hero__prices hero__prices--new-price">
+                    275₽
+                  </span>
+                    </div>
+                    <button class="hero__button button button--primary" type="button">
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <button class="swiper-button-prev" type="button"></button>
         <button class="swiper-button-next" type="button"></button>
         <div class="swiper-pagination"></div>
@@ -388,6 +455,27 @@
       </div>
     </footer>
     <script src="./js/script.js" defer></script>
+    <script type="module">
+      import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
 
+      const swiper = new Swiper('.swiper', {
+        cssMode: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        mousewheel: true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+          pageUpDown: true,
+        },
+      });
+
+    </script>
   </body>
 </html>

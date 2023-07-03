@@ -45,3 +45,29 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  background-color: colors.$base-white;
+  opacity: 1;
+  outline: 0;
+
+  &:hover {
+    background-color: colors.$primary-opacity;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: colors.$base-primary;
+}
+
