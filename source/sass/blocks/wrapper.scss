@@ -3,5 +3,8 @@
 
 .wrapper {
   max-width: variables.$desktop-width;
-  margin: 0 auto;
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto;
+  }
 }

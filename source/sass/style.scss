@@ -1,3 +1,6 @@
+/* VENDORS */
+@use "vendor/swiper";
+
 /* GLOBAL */
 @use "global/variables";
 @use "global/global";
@@ -21,6 +24,6 @@
 @use "blocks/footer";
 @use "blocks/social";
 @use "blocks/copyright";
-@use "blocks/swiper";
+@use "blocks/swiper-custom";
 @use "blocks/wrapper";
 
